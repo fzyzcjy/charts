@@ -97,6 +97,7 @@ class BarRenderer<D>
         domainAxis,
         domainAxis.rangeBand.round(),
         config.maxBarWidthPx,
+        config.minBarLengthPx,
         details.measure,
         details.measureOffset!,
         measureAxis,
@@ -221,6 +222,7 @@ class BarRenderer<D>
           domainAxis,
           domainWidth,
           config.maxBarWidthPx,
+          config.minBarLengthPx,
           measureValue,
           measureOffsetValue,
           measureAxis,
@@ -398,6 +400,7 @@ class BarRenderer<D>
       ImmutableAxis<D> domainAxis,
       int domainWidth,
       int? maxBarWidthPx,
+      int minBarLenghtPx,
       num? measureValue,
       num measureOffsetValue,
       ImmutableAxis<num> measureAxis,
@@ -481,11 +484,18 @@ class BarRenderer<D>
 
     Rectangle<int> bounds;
     if (renderingVertically) {
-      // Rectangle clamps to zero width/height
+      //TODO make it as option
+      // If bar has 0 height show it as 2 pixels on both sides of axis
+      if ((measureEnd - measureStart).abs() == 0) {
+        measureEnd -= minBarLenghtPx;
+      }
       bounds = Rectangle<int>(domainStart, measureEnd, domainEnd - domainStart,
           measureStart - measureEnd);
     } else {
-      // Rectangle clamps to zero width/height
+      // If bar has 0 height show it as 2 pixels on both sides of axis
+      if ((measureEnd - measureStart).abs() == 0) {
+        measureEnd += minBarLenghtPx;
+      }
       bounds = Rectangle<int>(min(measureStart, measureEnd), domainStart,
           (measureEnd - measureStart).abs(), domainEnd - domainStart);
     }
