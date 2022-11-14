@@ -1,6 +1,6 @@
-# Discontinued
+## Remark
 
-**This project is no longer maintained**, and will not receive further updates. Community members interested in collaborating on a community-maintained fork can coordinate in [this issue](https://github.com/google/charts/issues/798).
+[Upstream](https://github.com/google/charts/issues/798) discontinues working on it; I may not have enough time on my own to maintain it, but at least I will ensure it is runnable (for example, no compile errors or warnings on latest Flutter version).
 
 ---
 
