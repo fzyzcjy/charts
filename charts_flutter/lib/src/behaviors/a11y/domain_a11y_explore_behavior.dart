@@ -97,7 +97,7 @@ class DomainA11yExploreBehavior<D> extends ChartBehavior<D> {
   void updateCommonBehavior(common.ChartBehavior commonBehavior) {}
 
   @override
-  String get role => 'DomainA11yExplore-${exploreModeTrigger}';
+  String get role => 'DomainA11yExplore-$exploreModeTrigger';
 
   @override
   bool operator ==(Object o) =>

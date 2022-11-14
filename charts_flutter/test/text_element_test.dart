@@ -15,7 +15,6 @@
 
 import 'package:flutter/material.dart' show BuildContext;
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:flutter/widgets.dart' show InheritedWidget;
 
 import 'package:charts_flutter/src/graphics_factory.dart';
@@ -34,7 +33,7 @@ class FakeBuildContext extends Fake implements BuildContext {
 class FakeGraphicsFactoryHelper extends Fake implements GraphicsFactoryHelper {
   double textScaleFactor;
 
-  FakeGraphicsFactoryHelper(this.textScaleFactor) {}
+  FakeGraphicsFactoryHelper(this.textScaleFactor);
 
   @override
   double getTextScaleFactorOf(BuildContext context) => textScaleFactor;
