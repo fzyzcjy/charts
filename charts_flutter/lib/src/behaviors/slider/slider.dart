@@ -156,7 +156,7 @@ class Slider<D> extends ChartBehavior<D> {
         break;
       default:
         throw new ArgumentError(
-            'Slider does not support the event trigger ' + '"${eventTrigger}"');
+            'Slider does not support the event trigger ' + '"$eventTrigger"');
     }
     return desiredGestures;
   }
