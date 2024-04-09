@@ -13,7 +13,7 @@ dependencies:
   flutter_test:
     sdk: flutter
   meta: ^1.1.1
-  intl: "0.18.0"
+  intl: "0.18.1"
 flutter:
   uses-material-design: true
 dev_dependencies:
