@@ -4,8 +4,7 @@ description: Material Design charting library for flutter.
 homepage: https://github.com/google/charts
 
 environment:
-  sdk: ">=2.12.0"
-  flutter: ">=2.5.0"
+  sdk: ">=2.17.0"
 
 dependencies:
   # # Pointing this to a local path allows for pointing to the latest code
@@ -31,7 +30,7 @@ dependencies:
 
 dev_dependencies:
   mockito: ^5.0.0
-  build_runner: ^2.4.9
+  build_runner: ^2.1.11
   flutter_test:
     sdk: flutter
   test: ^1.3.0
